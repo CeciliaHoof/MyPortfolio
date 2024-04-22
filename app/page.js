@@ -25,11 +25,11 @@ export default function Page() {
             <p className="mt-3 text-lg leading-8 text-gray-600">
               I need to figure out what I want to say here... ughhhhh so hard talking about myself. blah blah blah
             </p>
-            <div className="grid grid-cols-3 mt-2 justify-items-center">
+            {/* <div className="grid grid-cols-3 mt-2 justify-items-center">
               <span className="mt-1 text-lg leading-8 text-gray-600"> <a href="/about">Get to Know Me</a></span>
               <span className="mt-1 text-lg leading-8 text-gray-600"> <a href="/about">View My Projects</a></span>
               <span className="mt-1 text-lg leading-8 text-gray-600"> <a href="/about">Get in Touch</a></span>
-            </div>
+            </div> */}
           </div>
         </div>
         <div

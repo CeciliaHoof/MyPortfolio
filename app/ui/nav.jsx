@@ -51,7 +51,7 @@ export default function Nav() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:gap-x-6 absolute right-0 py-2 px-6">
+        <div className="hidden lg:flex lg:gap-x-6 items-start">
           {contactInfo.map((contact) => (
             <a key={contact.title} href={contact.href}>
               <Image

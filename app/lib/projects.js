@@ -23,7 +23,7 @@ const projects = [
     title: "QuestForge",
     description:
       "An interactive text-based fantasy adventure game where users manage a party of adventurers and seek glory on various quests.",
-    tech: ["Python", "SQLite", "SQLAlchemy", "CLI", "rich"],
+    tech: ["Python", "SQLite", "CLI", "rich"],
     image: "/projects/QuestForge.png",
     tile: '/projects/tiles/questforge.png',
     demo: "https://www.loom.com/embed/8c3d53764b564dd1858ee1153aaeedcb?sid=38513402-0e7c-47cc-bf3b-cfdf1ede2312",
@@ -33,7 +33,7 @@ const projects = [
     title: "National Parks of California",
     description:
       "A platform dedicated to the US National Parks located in California, allowing users to explore park details and plan their next trip.",
-    tech: ["JavaScript", "React", "Semantic UI React", "JSON server"],
+    tech: ["JavaScript", "React", "Semantic UI React"],
     image: "/projects/NPCali.png",
     tile: '/projects/tiles/ca_parks.png',
     github: 'https://github.com/CeciliaHoof/California-National-Parks'
@@ -42,7 +42,7 @@ const projects = [
     title: "Harry Potter Book Reviewer",
     description:
       "A site allowing users to rate, review and learn about each of the Harry Potter novels, including a drag-and-drop quiz for each school year.",
-    tech: ["JavaScript", "HTML", "CSS", "JSON server"],
+    tech: ["JavaScript", "HTML", "CSS"],
     image: "/projects/HarryPotter.png",
     tile: '/projects/tiles/hp_reviewer.png',
     github: 'https://github.com/CeciliaHoof/HarryPotterBookReviewer'

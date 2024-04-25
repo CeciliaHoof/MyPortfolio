@@ -53,7 +53,7 @@ export default function Nav() {
         </div>
         <div className="hidden lg:flex lg:gap-x-6 items-start">
           {contactInfo.map((contact) => (
-            <a key={contact.title} href={contact.href}>
+            <a key={contact.title} href={contact.href} className="hover:animate-wiggle">
               <Image
                 src={contact.icon}
                 height={24}

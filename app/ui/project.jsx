@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { XMarkIcon } from "@heroicons/react/24/outline";
+import { Head } from 'next/head'
 import clsx from "clsx";
 
 export default function Project({ project, type }) {
@@ -122,10 +123,10 @@ export default function Project({ project, type }) {
                     >
                       <iframe
                         src={demo}
-                        frameborder="0"
-                        webkitallowfullscreen
-                        mozallowfullscreen
-                        allowfullscreen
+                        frameBorder="0"
+                        webkitallowfullscreen="true"
+                        mozallowfullscreen="true"
+                        allowFullScreen
                         className="absolute top-0 left-0 w-full h-full"
                       ></iframe>
                     </div>

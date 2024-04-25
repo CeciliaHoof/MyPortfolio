@@ -2,7 +2,7 @@ import Image from "next/image";
 import clsx from "clsx";
 
 export default function Blog({ blog, type }) {
-  const { title, link, published, image, summary } = blog;
+  const { title, link, published, image, summary, length } = blog;
 
   return (
     <div className={clsx("rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736]", type === 'other' ? 'col-span-1 md: col-span2' : 'col-span-1')}>
@@ -16,23 +16,33 @@ export default function Blog({ blog, type }) {
           priority="false"
         />
       )}
-      <div className={type === "other" ? "p-4" : "p-2" }>
+      <div className="p-4" >
         <h3
           className={clsx(
-            "text-captions font-bold",
-            type === "other" ? "text-base" : "text-xl"
+            "text-captions font-bold hover:animate-pulse text-center mb-2",
+            type === "other" ? "text-base" : "text-lg"
           )}
         >
-          {title}
+          <a href={link}>{title}</a>
         </h3>
+        <div className="flex justify-between">
         <p
           className={clsx(
-            "text-captions",
+            "text-sub-headers",
+            type === "other" ? "text-sm" : "text-base"
+          )}
+        >
+          {length}
+        </p>
+        <p
+          className={clsx(
+            "text-sub-headers text-right",
             type === "other" ? "text-sm" : "text-base"
           )}
         >
           {published}
         </p>
+        </div>
         <p
           className={clsx(
             "text-captions mt-2",

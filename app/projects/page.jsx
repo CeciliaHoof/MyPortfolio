@@ -24,7 +24,7 @@ export default function Page() {
       </h2>
       <div className="flex flex-row gap-5 justify-center">{featured}</div>
       <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-7 text-right">
-        other projects
+        other
       </h2>
       <div className="flex flex-row gap-5 justify-center">{other}</div>
     </>

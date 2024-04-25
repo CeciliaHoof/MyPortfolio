@@ -15,24 +15,14 @@ export default function Page() {
       <h1 className="text-3xl font-bold tracking-tight text-headers">
         Writing
       </h1>
-      <div className="grid grid-rows-2 gap-4">
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-5 text-right">
-            featured
-          </h2>
-          <div className="grid grid-cols-2 gap-4 justify-start">
-            {featured}
-          </div>
-        </div>
-        <div>
-          <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-5 text-right">
-            other
-          </h2>
-          <div className="grid grid-cols-4 gap-3 justify-center">
-            {other}
-          </div>
-        </div>
-      </div>
+      <h2 className="text-2xl font-bold tracking-tight text-sub-headers text-right">
+        featured
+      </h2>
+      <div className="grid grid-cols-2 gap-4">{featured}</div>
+      <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-5 text-right">
+        other
+      </h2>
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">{other}</div>
     </>
   );
 }

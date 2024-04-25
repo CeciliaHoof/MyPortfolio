@@ -16,7 +16,7 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold tracking-tight text-headers">
+      <h1 className="text-3xl font-bold tracking-tight text-headers">
         Projects
       </h1>
       <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-5 text-right">

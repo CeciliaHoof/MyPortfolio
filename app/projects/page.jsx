@@ -19,12 +19,12 @@ export default function Page() {
       <h1 className="text-3xl font-bold tracking-tight text-headers">
         Projects
       </h1>
-      <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-5 text-right">
+      <h2 className="text-2xl font-bold tracking-tight text-sub-headers text-right">
         featured
       </h2>
       <div className="flex flex-row gap-5 justify-center">{featured}</div>
       <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-7 text-right">
-        other projects
+        other
       </h2>
       <div className="flex flex-row gap-5 justify-center">{other}</div>
     </>

@@ -40,7 +40,7 @@ export default function Project({ project, type }) {
 
   return (
     <>
-      <div className="rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736]">
+      <div className={clsx("rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736]", type === "featured" ? "basis-1/2" : "basis-1/3")}>
         <Image
           className="rounded shadow shadow-color-[#4c5657] float-left"
           src={imageDis}

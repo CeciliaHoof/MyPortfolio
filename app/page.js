@@ -14,16 +14,16 @@ export default function Page() {
             }}
           />
         </div>
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-headers sm:text-6xl">
+        <div className="mx-auto max-w-4xl py-32 sm:py-48 lg:py-56">
+          <div className="text-left">
+            <h1 className="text-2xl font-bold tracking-tight text-headers sm:text-4xl">
               Cecilia Chimento
             </h1>
-            <h2 className="text-2xl tracking-tight text-sub-headers sm:text-4xl">
-              Full Stack Software Engineer
+            <h2 className="text-2xl tracking-tight text-sub-headers sm:text-6xl">
+              Full Stack Software Engineer <br></br>and Critical Care RN
             </h2>
             <p className="mt-3 text-lg leading-8 text-captions">
-              I need to figure out what I want to say here... ughhhhh so hard talking about myself. blah blah blah
+              
             </p>
             {/* <div className="grid grid-cols-3 mt-2 justify-items-center">
               <span className="mt-1 text-lg leading-8 text-gray-600"> <a href="/about">Get to Know Me</a></span>

@@ -7,8 +7,9 @@ import { XMarkIcon } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 
 export default function Project({ project, type }) {
-  const { title, tile, description, tech, github, demo } = project;
+  const { title, image, tile, description, tech, github, demo } = project;
   const [isOpen, setIsOpen] = useState(false);
+  const [imageDis, setImageDis] = useState(tile);
 
   let imageWidth, imageHeight;
 
@@ -16,14 +17,14 @@ export default function Project({ project, type }) {
     imageWidth = 460;
     imageHeight = 330;
   } else {
-    imageWidth = 304;
-    imageHeight = 218;
+    imageWidth = 300;
+    imageHeight = 215;
   }
 
   const techDis = tech.map((tech) => (
     <div
       key={tech}
-      className="border-2 px-1 rounded-lg border-headers text-headers text-sm"
+      className={clsx("border-2 px-1 rounded-lg border-headers text-headers", type === "other" ? "text-xs" : "text-sm")}
     >
       {tech}
     </div>
@@ -39,27 +40,36 @@ export default function Project({ project, type }) {
 
   return (
     <>
-      <div
-        className={
-          "rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736] w-full"}
-      >
+      <div className="rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736]">
         <Image
           className="rounded shadow shadow-color-[#4c5657] float-left"
-          src={tile}
+          src={imageDis}
           width={imageWidth}
           height={imageHeight}
           alt={`${title}`}
           priority="false"
+          onMouseEnter={() => setImageDis(image)}
+          onMouseOut={() => setImageDis(tile)}
         />
         {/* <span className="w-full h-0.5 bg-dark block"></span> */}
-        <div className="p-3 text-center flex flex-col justify-start gap-3">
-          <p className="text-captions text-sm">{description}</p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <div className="bg-[#d5d5d5] border-2 px-1 rounded-lg border-captions text-captions">
+        <div className={clsx("text-center flex flex-col justify-start gap-3", type === "featured" ? "p-4" : "p-3")}>
+          <p className={clsx("text-captions", type === "other" ? "text-xs" : "text-sm")}>{description}</p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <div
+              className={clsx(
+                "bg-[#d5d5d5] border-2 px-1 rounded-lg border-captions text-captions",
+                type === "other" ? "text-sm" : ""
+              )}
+            >
               <a href={github}>GitHub</a>
             </div>
             {demo && (
-              <div className="bg-[#d5d5d5] border-2 px-1 rounded-lg border-captions text-captions cursor-pointer">
+              <div
+                className={clsx(
+                  "bg-[#d5d5d5] border-2 px-1 rounded-lg border-captions text-captions cursor-pointer",
+                  type === "other" ? "text-sm" : ""
+                )}
+              >
                 <p onClick={openDialog}>Demo</p>
               </div>
             )}
@@ -98,12 +108,18 @@ export default function Project({ project, type }) {
                     as="h3"
                     className="text-lg font-medium leading-6 text-headers text-center"
                   >
-                    <XMarkIcon onClick={() => setIsOpen(false)} className="h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon
+                      onClick={() => setIsOpen(false)}
+                      className="h-6 w-6"
+                      aria-hidden="true"
+                    />
                     {`${title} Demo`}
                   </Dialog.Title>
                   <div className="mt-2">
-                    
-                    <div className="relative" style={{ paddingBottom: "64.94708994708994%", height: 0 }}>
+                    <div
+                      className="relative"
+                      style={{ paddingBottom: "64.94708994708994%", height: 0 }}
+                    >
                       <iframe
                         src={demo}
                         frameborder="0"
@@ -114,7 +130,6 @@ export default function Project({ project, type }) {
                       ></iframe>
                     </div>
                   </div>
-
                 </Dialog.Panel>
               </Transition.Child>
             </div>

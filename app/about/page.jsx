@@ -34,7 +34,7 @@ export default function Page() {
           embarking on this new mission is no different.
         </p>
       </div>
-      <p className="text-2xl tracking-tight text-captions sm:text-xl w-5/12 m-auto mt-40 text-left">
+      <p className="text-2xl tracking-tight text-captions sm:text-xl w-5/12 m-auto mt-40 text-center">
         <span className="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl block mt-10">
           More to come! Meanwhile, explore my projects and blog posts and let&apos;s connect!{" "}
         </span>

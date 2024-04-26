@@ -9,7 +9,7 @@ export default function Page() {
           Loading...{" "}
         </span>
         I thought that this section would be the easy part, but it turns out
-        that&apos;s not the case.  Check out back soon!{" "}
+        that&apos;s not the case.  Check back soon!{" "}
         <span className="text-2xl font-bold tracking-tight text-gray-900 sm:text-2xl block mt-10">
           Meanwhile, explore my projects and blog posts and let&apos;s connect!{" "}
         </span>

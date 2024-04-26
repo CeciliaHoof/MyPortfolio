@@ -18,6 +18,7 @@ const navigation = [
 export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+
   return (
     <header className="w-full absolute inset-x-0 top-0 z-50 bg-medium">
       <nav
@@ -91,9 +92,9 @@ export default function Nav() {
                     key={item.name}
                     href={item.href}
                     className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-3 text-white hover:bg-medium"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     {item.name}
-                    
                   </Link>
                 ))}
                 <div className="flex justify-center gap-x-6">

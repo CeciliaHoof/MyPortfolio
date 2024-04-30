@@ -123,7 +123,6 @@ export default function Project({ project, type }) {
                     >
                       <iframe
                         src={demo}
-                        frameBorder="0"
                         webkitallowfullscreen="true"
                         mozallowfullscreen="true"
                         allowFullScreen

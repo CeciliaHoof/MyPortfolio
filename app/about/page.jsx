@@ -1,28 +1,8 @@
 import Image from "next/image";
+import Link from "next/link"
+import { skills } from "../lib/skills";
 
 export default function Page() {
-  const skills = [
-    "JavaScript",
-    "React",
-    "Next.js",
-    "Python",
-    "Flask",
-    "SQL",
-    "SQLite",
-    "SQLAlchemy",
-    "HTML",
-    "CSS",
-    "Git",
-    "GitHub",
-    "RESTful APIs",
-    "Miro",
-    "Figma",
-    "Chart.js",
-    "Beautiful Soup",
-    "Material UI",
-    "Semantic UI",
-    "Tailwind CSS",
-  ];
 
   for (let i = 0; i < skills.length - 1; i++) {
     skills[i] += " • ";
@@ -89,6 +69,9 @@ export default function Page() {
           <ul className="flex flex-wrap items-center justify-center gap-1">
             {skillsDisplay}
           </ul>
+          <Link href="/Cecilia_Chimento_Resume.pdf" download={true} target={"_blank"} className="text-2xl font-bold tracking-tight text-captions block mt-8 text-center">
+            View Resume
+          </Link>
         </div>
       </div>
     </>

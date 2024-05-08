@@ -21,4 +21,8 @@ const skills = [
   "Tailwind CSS",
 ];
 
+for (let i = 0; i < skills.length - 1; i++) {
+  skills[i] += " • ";
+}
+
 module.exports = { skills };

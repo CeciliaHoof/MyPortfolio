@@ -3,13 +3,9 @@ import Link from "next/link"
 import { skills } from "../lib/skills";
 
 export default function Page() {
-
-  for (let i = 0; i < skills.length - 1; i++) {
-    skills[i] += " • ";
-    console.log(skills[i]);
-  }
-
-  const skillsDisplay = skills.map((skill) => (
+  
+  const skillsDisplay = skills
+  .map((skill) => (
     <li
       key={skill}
       className="text-sm tracking-tight text-captions sm:text-base text-left mt-3"
@@ -17,7 +13,7 @@ export default function Page() {
       {skill}
     </li>
   ));
-
+  
   return (
     <>
       <h1 className="text-3xl font-bold tracking-tight text-headers">

@@ -22,7 +22,7 @@ export default function Page() {
           <h2 className="text-2xl tracking-tight text-sub-headers sm:text-4xl">
             Full Stack Software Engineer <br></br>and Critical Care RN
           </h2>
-          <p className=" text-xl mt-3 text-lg leading-8 text-captions">Driven to develop meaningful solutions that merge healthcare and technology, offering a distinctive viewpoint and versatile skill set.</p>
+          <p className=" text-xl mt-3 text-lg leading-8 text-captions">Driven to develop meaningful solutions that create lasting impact, offering a distinctive viewpoint and versatile skill set.</p>
         </div>
       </div>
       {/* <div

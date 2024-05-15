@@ -1,11 +1,9 @@
 import Image from "next/image";
-import Link from "next/link"
+import Link from "next/link";
 import { skills } from "../lib/skills";
 
 export default function Page() {
-  
-  const skillsDisplay = skills
-  .map((skill) => (
+  const skillsDisplay = skills.map((skill) => (
     <li
       key={skill}
       className="text-sm tracking-tight text-captions sm:text-base text-left mt-3"
@@ -13,14 +11,14 @@ export default function Page() {
       {skill}
     </li>
   ));
-  
+
   return (
     <>
       <h1 className="text-3xl font-bold tracking-tight text-headers">
         About Me
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 mt-4">
-      <div className="col-span-2 flex justify-center md:col-span-1 md:justify-start">
+        <div className="col-span-2 flex justify-center md:col-span-1 md:justify-start">
           <Image
             className="rounded shadow shadow-color-[#4c5657]"
             src="/about_me.png"
@@ -38,26 +36,32 @@ export default function Page() {
             Hi, I&apos;m Cecilia, and I&apos;m a Software Engineer on a mission.
           </p>
           <p className="text-sm tracking-tight text-captions sm:text-base text-left mt-3">
-            For the past five years, I&apos;ve been a Registered Nurse in adult
-            and neonatal intensive care units, where collaboration and
-            problem-solving were daily essentials. During this time, I also
-            worked as a COVID-19 crisis response nurse, which reinforced my
-            skills for working in fast-paced, high-intensity environments.
+            For the past five years, I&apos;ve been a Registered Nurse in adult and
+            neonatal intensive care units, where collaboration, problem-solving,
+            and attention to detail were daily essentials. During this time, I
+            also worked as a COVID-19 crisis response nurse, honing my ability
+            to thrive in fast-paced, high-intensity environments.
           </p>
           <p className="text-sm tracking-tight text-captions sm:text-base text-left mt-3">
-            Witnessing firsthand the potential for technology and innovation to
-            revolutionize healthcare, I embarked on a journey to marry my
-            medical expertise with cutting-edge software development skills.
-            With the arsenal gained from the Flatiron School Full Stack Software
-            Engineering program and my rich medical background, I&apos;m poised
-            to be a driving force in reshaping how technology enhances our
-            healthcare experiences.
+            Inspired by the transformative potential of technology, I embarked
+            on a journey to combine my critical thinking and analytical
+            expertise with cutting-edge software development skills. Through the
+            rigorous Full Stack Software Engineering program at Flatiron School,
+            I gained a solid foundation in technologies such as JavaScript,
+            React, Python, and SQL.
           </p>
           <p className="text-sm tracking-tight text-captions sm:text-base text-left mt-3">
-            From completing an accelerated Bachelor of Science degree Summa Cum
-            Laude to caring for our country&apos;s most critical patients, I
-            have never met a challenge that I haven&apos;t fully embraced and
-            overcome, and embarking on this new mission is no different.
+            My unique background allows me to approach problems with a fresh
+            perspective and innovative solutions. From completing an accelerated
+            Bachelor of Science degree Summa Cum Laude to developing impactful
+            software projects, I have consistently embraced and overcome
+            challenges.
+          </p>
+          <p className="text-sm tracking-tight text-captions sm:text-base text-left mt-3">
+            I&apos;m passionate about leveraging technology to create solutions that
+            drive meaningful impact. Whether it&apos;s improving user experiences,
+            optimizing processes, or developing new features, I&apos;m dedicated to
+            delivering high-quality, scalable software.
           </p>
           <h2 className="text-2xl font-bold tracking-tight text-sub-headers block mt-6 text-right">
             my skills{" "}
@@ -65,7 +69,12 @@ export default function Page() {
           <ul className="flex flex-wrap items-center justify-center gap-1">
             {skillsDisplay}
           </ul>
-          <Link href="/Cecilia_Chimento_Resume.pdf" download={true} target={"_blank"} className="text-2xl font-bold tracking-tight text-captions block mt-8 text-center">
+          <Link
+            href="/Cecilia_Chimento_Resume.pdf"
+            download={true}
+            target={"_blank"}
+            className="text-2xl font-bold tracking-tight text-captions block mt-8 text-center"
+          >
             View Resume
           </Link>
         </div>

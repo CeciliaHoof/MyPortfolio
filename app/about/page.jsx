@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import photo from "../../public/about_me.png"
 import { skills } from "../lib/skills";
 
 export default function Page() {
@@ -18,17 +19,16 @@ export default function Page() {
         About Me
       </h1>
       <div className="grid grid-cols-2 md:grid-cols-3 mt-4">
-        <div className="col-span-2 flex justify-center md:col-span-1 md:justify-start">
+        <div className="col-span-2 md:col-span-1 block">
           <Image
-            className="rounded shadow shadow-color-[#4c5657]"
-            src="/about_me.png"
-            width={450}
-            height={562}
+            className="rounded shadow shadow-color-[#4c5657] m-auto md:ml-0"
+            src={photo}
             alt="Cecilia Chimento head shot"
-            priority="false"
+            priority="true"
+            // layout="responsive"
           />
         </div>
-        <div className="col-span-2">
+        <div className="col-span-2 pl-2">
           <h2 className="text-2xl font-bold tracking-tight text-sub-headers block mt-2 text-right">
             my story{" "}
           </h2>
@@ -73,7 +73,7 @@ export default function Page() {
             href="/Cecilia_Chimento_Resume.pdf"
             download={true}
             target={"_blank"}
-            className="text-2xl font-bold tracking-tight text-captions block mt-8 text-center"
+            className="text-2xl font-bold tracking-tight text-captions block mt-6 text-center mb-4"
           >
             View Resume
           </Link>

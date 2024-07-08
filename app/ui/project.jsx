@@ -18,8 +18,8 @@ export default function Project({ project, type }) {
     imageWidth = 460;
     imageHeight = 330;
   } else {
-    imageWidth = 300;
-    imageHeight = 215;
+    imageWidth = 345;
+    imageHeight = 247;
   }
 
   const techDis = tech.map((tech) => (
@@ -41,19 +41,18 @@ export default function Project({ project, type }) {
 
   return (
     <>
-      <div className={clsx("rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736]", type === "featured" ? "basis-1/2" : "basis-1/3")}>
+      <div className={clsx("rounded bg-[#eeeeee] shadow-lg shadow-color-[#344736] grid grid-cols-2", type === "featured" ? "col-span-3" : "col-span-2")}>
         <Image
-          className="rounded shadow shadow-color-[#4c5657] float-left"
+          className="rounded shadow shadow-color-[#4c5657] col-span-2 lg:col-span-1"
           src={imageDis}
           width={imageWidth}
           height={imageHeight}
           alt={`${title}`}
-          priority="false"
           onMouseEnter={() => setImageDis(image)}
           onMouseOut={() => setImageDis(tile)}
         />
         {/* <span className="w-full h-0.5 bg-dark block"></span> */}
-        <div className={clsx("text-center flex flex-col justify-start gap-3", type === "featured" ? "p-4" : "p-3")}>
+        <div className={clsx("text-center col-span-2 lg:col-span-1 flex flex-col justify-start gap-3", type === "featured" ? "p-4" : "p-3")}>
           <p className={clsx("text-captions", type === "other" ? "text-xs" : "text-sm")}>{description}</p>
           <div className="flex flex-wrap justify-center gap-2">
             <div

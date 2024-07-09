@@ -22,11 +22,11 @@ export default function Page() {
       <h2 className="text-2xl font-bold tracking-tight text-sub-headers text-right">
         featured
       </h2>
-      <div className="flex flex-row gap-5 justify-center">{featured}</div>
+      <div className="grid grid-cols-6 gap-5 lg:flex lg:flex-row lg:justify-center">{featured}</div>
       <h2 className="text-2xl font-bold tracking-tight text-sub-headers mt-7 text-right">
         other
       </h2>
-      <div className="flex flex-row gap-5 justify-center">{other}</div>
+      <div className="grid grid-cols-6 gap-5 lg:flex lg:flex-row lg:justify-center">{other}</div>
     </>
   );
 }
